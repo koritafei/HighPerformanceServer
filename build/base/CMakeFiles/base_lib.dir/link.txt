@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libbase_lib.a CMakeFiles/base_lib.dir/thread_pool/ctrip_thread_pool.cc.o
+/usr/bin/ranlib ../../lib/libbase_lib.a

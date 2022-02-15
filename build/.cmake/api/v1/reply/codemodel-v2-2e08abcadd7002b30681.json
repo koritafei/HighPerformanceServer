@@ -1,0 +1,193 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.0"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "base",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "base",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "base/tests",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "base/tests",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "HighPerformanceServer",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "base_lib::@4506b02e7a4fef989908",
+					"jsonFile" : "target-base_lib-Debug-973b04a934f6ef7869bd.json",
+					"name" : "base_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "blocking_server::@2c408e4d1913c8ab02e6",
+					"jsonFile" : "target-blocking_server-Debug-f8c852748702330d6b4e.json",
+					"name" : "blocking_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "client_unittest1::@2c408e4d1913c8ab02e6",
+					"jsonFile" : "target-client_unittest1-Debug-ce0a53de27c510669502.json",
+					"name" : "client_unittest1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "client_unittest2::@2c408e4d1913c8ab02e6",
+					"jsonFile" : "target-client_unittest2-Debug-dbf158d5089a0a8505ae.json",
+					"name" : "client_unittest2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "client_unittest3::@2c408e4d1913c8ab02e6",
+					"jsonFile" : "target-client_unittest3-Debug-c22fe31bc86e68646b43.json",
+					"name" : "client_unittest3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ctrip_thread_pool_unittest::@2c408e4d1913c8ab02e6",
+					"jsonFile" : "target-ctrip_thread_pool_unittest-Debug-30496ad7506248bd2612.json",
+					"name" : "ctrip_thread_pool_unittest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "nonblocking_connect_unittest::@2c408e4d1913c8ab02e6",
+					"jsonFile" : "target-nonblocking_connect_unittest-Debug-3f613bf95c6d99a73d57.json",
+					"name" : "nonblocking_connect_unittest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "select_client_unittest::@2c408e4d1913c8ab02e6",
+					"jsonFile" : "target-select_client_unittest-Debug-115d0684bf99d12547fe.json",
+					"name" : "select_client_unittest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "select_server_unittest::@2c408e4d1913c8ab02e6",
+					"jsonFile" : "target-select_server_unittest-Debug-6738c3f32ebad4658ca5.json",
+					"name" : "select_server_unittest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "server_unittest::@2c408e4d1913c8ab02e6",
+					"jsonFile" : "target-server_unittest-Debug-02f66becd12f4b2ace07.json",
+					"name" : "server_unittest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "structuredbinding_unittest::@2c408e4d1913c8ab02e6",
+					"jsonFile" : "target-structuredbinding_unittest-Debug-fbb0f21569c0d937ba4e.json",
+					"name" : "structuredbinding_unittest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "varglist_unittest::@2c408e4d1913c8ab02e6",
+					"jsonFile" : "target-varglist_unittest-Debug-515d5ddc11e700fd957a.json",
+					"name" : "varglist_unittest",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/koritafei/code/HighPerformanceServer/build",
+		"source" : "/home/koritafei/code/HighPerformanceServer"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

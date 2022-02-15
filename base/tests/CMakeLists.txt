@@ -1,0 +1,18 @@
+add_executable(varglist_unittest varglist_unittest.cc)
+add_executable(structuredbinding_unittest structuredbinding_unittest.cc)
+
+
+add_executable(ctrip_thread_pool_unittest ctrip_thread_pool_unittest.cc)
+target_link_libraries(ctrip_thread_pool_unittest base_lib)
+
+add_executable(server_unittest server_unittest.cc)
+add_executable(client_unittest1 client_unittest1.cc)
+add_executable(client_unittest2 client_unittest2.cc)
+add_executable(client_unittest3 client_unittest3.cc)
+
+add_executable(nonblocking_connect_unittest nonblocking_connect_unittest.cc)
+
+add_executable(select_server_unittest select_server_unittest.cc)
+
+add_executable(select_client_unittest select_client_unittest.cc)
+add_executable(blocking_server blocking_server.cc)

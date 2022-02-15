@@ -1,0 +1,92 @@
+<mxfile host="65bd71144e">
+    <diagram id="0Mai2yO3xWXTLMDD4-60" name="第 1 页">
+        <mxGraphModel dx="898" dy="669" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" value="" style="edgeStyle=none;html=1;fontFamily=Comic Sans MS;fontSize=16;" edge="1" parent="1" source="2" target="3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="创建侦听socket" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="60" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="edgeStyle=none;html=1;fontFamily=Comic Sans MS;fontSize=16;" edge="1" parent="1" source="3" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="绑定地址和端口号" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="130" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="edgeStyle=none;html=1;fontFamily=Comic Sans MS;fontSize=16;" edge="1" parent="1" source="5" target="9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="将socket加入到待检测的可读事件集合中" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Comic Sans MS;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="200" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="edgeStyle=none;html=1;fontFamily=Comic Sans MS;fontSize=16;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="9" target="5">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="150" y="320" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="200" y="320"/>
+                            <mxPoint x="200" y="230"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="无" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;fontFamily=Comic Sans MS;" vertex="1" connectable="0" parent="12">
+                    <mxGeometry x="-0.0578" y="-1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="" style="edgeStyle=none;html=1;fontFamily=Comic Sans MS;fontSize=16;" edge="1" parent="1" source="9" target="14">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="有" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;fontFamily=Comic Sans MS;" vertex="1" connectable="0" parent="15">
+                    <mxGeometry x="-0.35" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="指定事件内有&lt;br&gt;可读事件" style="rhombus;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Comic Sans MS;rounded=1;" vertex="1" parent="1">
+                    <mxGeometry x="255" y="280" width="170" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="edgeStyle=none;html=1;fontFamily=Comic Sans MS;fontSize=16;" edge="1" parent="1" source="14" target="17">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="edgeStyle=none;html=1;fontFamily=Comic Sans MS;fontSize=16;" edge="1" parent="1" source="14" target="20">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;fontFamily=Comic Sans MS;" vertex="1" connectable="0" parent="21">
+                    <mxGeometry x="-0.1385" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="可读事件的对象是&lt;br&gt;侦听socket" style="rhombus;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Comic Sans MS;rounded=1;" vertex="1" parent="1">
+                    <mxGeometry x="255" y="400" width="170" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="edgeStyle=none;html=1;fontFamily=Comic Sans MS;fontSize=16;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="17" target="5">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="140" y="330" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="140" y="230"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="接收连接产生新的client socket" style="whiteSpace=wrap;html=1;fontSize=16;fontFamily=Comic Sans MS;rounded=1;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="410" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="是" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;fontFamily=Comic Sans MS;" vertex="1" parent="1">
+                    <mxGeometry x="215" y="420" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="edgeStyle=none;html=1;fontFamily=Comic Sans MS;fontSize=16;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="20" target="5">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="550" y="330" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="550" y="230"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="从client socket上接收数据" style="whiteSpace=wrap;html=1;fontSize=16;fontFamily=Comic Sans MS;rounded=1;" vertex="1" parent="1">
+                    <mxGeometry x="490" y="410" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
