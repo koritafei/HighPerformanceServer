@@ -31,4 +31,27 @@ int main(int argc, char **argv) {
   }
 
   // 启动侦听
+  if (-1 == listen(listenfd, SOMAXCONN)) {
+    std::cout << "listen error" << std::endl;
+    close(listenfd);
+    return -1;
+  }
+
+  while (true) {
+    struct sockaddr_in clientaddr;
+    socklen_t          socklen = sizeof(clientaddr);
+
+    // 接受客户端连接
+    int clientfd = accept(listenfd,
+                          reinterpret_cast<struct sockaddr *>(&clientaddr),
+                          &socklen);
+    if (-1 != clientfd) {
+      std::cout << "accept a client connection, clientfd: " << clientfd
+                << std::endl;
+    }
+  }
+
+  close(listenfd);
+
+  return 0;
 }

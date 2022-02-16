@@ -64,14 +64,17 @@ CMAKE_BINARY_DIR = /Users/quwei5/Desktop/code/HighPerformanceServer/build
 
 # The main recursive "all" target.
 all: base/all
+all: net/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: base/preinstall
+preinstall: net/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: base/clean
+clean: net/clean
 .PHONY : clean
 
 #=============================================================================
@@ -103,6 +106,10 @@ base/tests/all: base/tests/CMakeFiles/client_unittest1.dir/all
 base/tests/all: base/tests/CMakeFiles/client_unittest2.dir/all
 base/tests/all: base/tests/CMakeFiles/client_unittest3.dir/all
 base/tests/all: base/tests/CMakeFiles/nonblocking_connect_unittest.dir/all
+base/tests/all: base/tests/CMakeFiles/select_server_unittest.dir/all
+base/tests/all: base/tests/CMakeFiles/select_client_unittest.dir/all
+base/tests/all: base/tests/CMakeFiles/blocking_server.dir/all
+base/tests/all: base/tests/CMakeFiles/blocking_client.dir/all
 .PHONY : base/tests/all
 
 # Recursive "preinstall" directory target.
@@ -118,7 +125,41 @@ base/tests/clean: base/tests/CMakeFiles/client_unittest1.dir/clean
 base/tests/clean: base/tests/CMakeFiles/client_unittest2.dir/clean
 base/tests/clean: base/tests/CMakeFiles/client_unittest3.dir/clean
 base/tests/clean: base/tests/CMakeFiles/nonblocking_connect_unittest.dir/clean
+base/tests/clean: base/tests/CMakeFiles/select_server_unittest.dir/clean
+base/tests/clean: base/tests/CMakeFiles/select_client_unittest.dir/clean
+base/tests/clean: base/tests/CMakeFiles/blocking_server.dir/clean
+base/tests/clean: base/tests/CMakeFiles/blocking_client.dir/clean
 .PHONY : base/tests/clean
+
+#=============================================================================
+# Directory level rules for directory net
+
+# Recursive "all" directory target.
+net/all: net/tests/all
+.PHONY : net/all
+
+# Recursive "preinstall" directory target.
+net/preinstall: net/tests/preinstall
+.PHONY : net/preinstall
+
+# Recursive "clean" directory target.
+net/clean: net/tests/clean
+.PHONY : net/clean
+
+#=============================================================================
+# Directory level rules for directory net/tests
+
+# Recursive "all" directory target.
+net/tests/all: net/tests/CMakeFiles/reactor_unittest.dir/all
+.PHONY : net/tests/all
+
+# Recursive "preinstall" directory target.
+net/tests/preinstall:
+.PHONY : net/tests/preinstall
+
+# Recursive "clean" directory target.
+net/tests/clean: net/tests/CMakeFiles/reactor_unittest.dir/clean
+.PHONY : net/tests/clean
 
 #=============================================================================
 # Target rules for target base/CMakeFiles/base_lib.dir
@@ -153,7 +194,7 @@ base/CMakeFiles/base_lib.dir/clean:
 base/tests/CMakeFiles/varglist_unittest.dir/all:
 	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/varglist_unittest.dir/build.make base/tests/CMakeFiles/varglist_unittest.dir/depend
 	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/varglist_unittest.dir/build.make base/tests/CMakeFiles/varglist_unittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=17,18 "Built target varglist_unittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=27,28 "Built target varglist_unittest"
 .PHONY : base/tests/CMakeFiles/varglist_unittest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -179,7 +220,7 @@ base/tests/CMakeFiles/varglist_unittest.dir/clean:
 base/tests/CMakeFiles/structuredbinding_unittest.dir/all:
 	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/structuredbinding_unittest.dir/build.make base/tests/CMakeFiles/structuredbinding_unittest.dir/depend
 	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/structuredbinding_unittest.dir/build.make base/tests/CMakeFiles/structuredbinding_unittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=15,16 "Built target structuredbinding_unittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=25,26 "Built target structuredbinding_unittest"
 .PHONY : base/tests/CMakeFiles/structuredbinding_unittest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -205,7 +246,7 @@ base/tests/CMakeFiles/structuredbinding_unittest.dir/clean:
 base/tests/CMakeFiles/ctrip_thread_pool_unittest.dir/all: base/CMakeFiles/base_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/ctrip_thread_pool_unittest.dir/build.make base/tests/CMakeFiles/ctrip_thread_pool_unittest.dir/depend
 	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/ctrip_thread_pool_unittest.dir/build.make base/tests/CMakeFiles/ctrip_thread_pool_unittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=9,10 "Built target ctrip_thread_pool_unittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=13,14 "Built target ctrip_thread_pool_unittest"
 .PHONY : base/tests/CMakeFiles/ctrip_thread_pool_unittest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -231,7 +272,7 @@ base/tests/CMakeFiles/ctrip_thread_pool_unittest.dir/clean:
 base/tests/CMakeFiles/server_unittest.dir/all:
 	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/server_unittest.dir/build.make base/tests/CMakeFiles/server_unittest.dir/depend
 	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/server_unittest.dir/build.make base/tests/CMakeFiles/server_unittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=13,14 "Built target server_unittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=23,24 "Built target server_unittest"
 .PHONY : base/tests/CMakeFiles/server_unittest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -257,7 +298,7 @@ base/tests/CMakeFiles/server_unittest.dir/clean:
 base/tests/CMakeFiles/client_unittest1.dir/all:
 	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/client_unittest1.dir/build.make base/tests/CMakeFiles/client_unittest1.dir/depend
 	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/client_unittest1.dir/build.make base/tests/CMakeFiles/client_unittest1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=3,4 "Built target client_unittest1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=7,8 "Built target client_unittest1"
 .PHONY : base/tests/CMakeFiles/client_unittest1.dir/all
 
 # Build rule for subdir invocation for target.
@@ -283,7 +324,7 @@ base/tests/CMakeFiles/client_unittest1.dir/clean:
 base/tests/CMakeFiles/client_unittest2.dir/all:
 	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/client_unittest2.dir/build.make base/tests/CMakeFiles/client_unittest2.dir/depend
 	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/client_unittest2.dir/build.make base/tests/CMakeFiles/client_unittest2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=5,6 "Built target client_unittest2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=9,10 "Built target client_unittest2"
 .PHONY : base/tests/CMakeFiles/client_unittest2.dir/all
 
 # Build rule for subdir invocation for target.
@@ -309,7 +350,7 @@ base/tests/CMakeFiles/client_unittest2.dir/clean:
 base/tests/CMakeFiles/client_unittest3.dir/all:
 	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/client_unittest3.dir/build.make base/tests/CMakeFiles/client_unittest3.dir/depend
 	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/client_unittest3.dir/build.make base/tests/CMakeFiles/client_unittest3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=7,8 "Built target client_unittest3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=11,12 "Built target client_unittest3"
 .PHONY : base/tests/CMakeFiles/client_unittest3.dir/all
 
 # Build rule for subdir invocation for target.
@@ -335,7 +376,7 @@ base/tests/CMakeFiles/client_unittest3.dir/clean:
 base/tests/CMakeFiles/nonblocking_connect_unittest.dir/all:
 	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/nonblocking_connect_unittest.dir/build.make base/tests/CMakeFiles/nonblocking_connect_unittest.dir/depend
 	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/nonblocking_connect_unittest.dir/build.make base/tests/CMakeFiles/nonblocking_connect_unittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=11,12 "Built target nonblocking_connect_unittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=15,16 "Built target nonblocking_connect_unittest"
 .PHONY : base/tests/CMakeFiles/nonblocking_connect_unittest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -353,6 +394,136 @@ nonblocking_connect_unittest: base/tests/CMakeFiles/nonblocking_connect_unittest
 base/tests/CMakeFiles/nonblocking_connect_unittest.dir/clean:
 	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/nonblocking_connect_unittest.dir/build.make base/tests/CMakeFiles/nonblocking_connect_unittest.dir/clean
 .PHONY : base/tests/CMakeFiles/nonblocking_connect_unittest.dir/clean
+
+#=============================================================================
+# Target rules for target base/tests/CMakeFiles/select_server_unittest.dir
+
+# All Build rule for target.
+base/tests/CMakeFiles/select_server_unittest.dir/all:
+	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/select_server_unittest.dir/build.make base/tests/CMakeFiles/select_server_unittest.dir/depend
+	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/select_server_unittest.dir/build.make base/tests/CMakeFiles/select_server_unittest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=21,22 "Built target select_server_unittest"
+.PHONY : base/tests/CMakeFiles/select_server_unittest.dir/all
+
+# Build rule for subdir invocation for target.
+base/tests/CMakeFiles/select_server_unittest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/tests/CMakeFiles/select_server_unittest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles 0
+.PHONY : base/tests/CMakeFiles/select_server_unittest.dir/rule
+
+# Convenience name for target.
+select_server_unittest: base/tests/CMakeFiles/select_server_unittest.dir/rule
+.PHONY : select_server_unittest
+
+# clean rule for target.
+base/tests/CMakeFiles/select_server_unittest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/select_server_unittest.dir/build.make base/tests/CMakeFiles/select_server_unittest.dir/clean
+.PHONY : base/tests/CMakeFiles/select_server_unittest.dir/clean
+
+#=============================================================================
+# Target rules for target base/tests/CMakeFiles/select_client_unittest.dir
+
+# All Build rule for target.
+base/tests/CMakeFiles/select_client_unittest.dir/all:
+	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/select_client_unittest.dir/build.make base/tests/CMakeFiles/select_client_unittest.dir/depend
+	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/select_client_unittest.dir/build.make base/tests/CMakeFiles/select_client_unittest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=19,20 "Built target select_client_unittest"
+.PHONY : base/tests/CMakeFiles/select_client_unittest.dir/all
+
+# Build rule for subdir invocation for target.
+base/tests/CMakeFiles/select_client_unittest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/tests/CMakeFiles/select_client_unittest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles 0
+.PHONY : base/tests/CMakeFiles/select_client_unittest.dir/rule
+
+# Convenience name for target.
+select_client_unittest: base/tests/CMakeFiles/select_client_unittest.dir/rule
+.PHONY : select_client_unittest
+
+# clean rule for target.
+base/tests/CMakeFiles/select_client_unittest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/select_client_unittest.dir/build.make base/tests/CMakeFiles/select_client_unittest.dir/clean
+.PHONY : base/tests/CMakeFiles/select_client_unittest.dir/clean
+
+#=============================================================================
+# Target rules for target base/tests/CMakeFiles/blocking_server.dir
+
+# All Build rule for target.
+base/tests/CMakeFiles/blocking_server.dir/all:
+	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/blocking_server.dir/build.make base/tests/CMakeFiles/blocking_server.dir/depend
+	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/blocking_server.dir/build.make base/tests/CMakeFiles/blocking_server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=5,6 "Built target blocking_server"
+.PHONY : base/tests/CMakeFiles/blocking_server.dir/all
+
+# Build rule for subdir invocation for target.
+base/tests/CMakeFiles/blocking_server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/tests/CMakeFiles/blocking_server.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles 0
+.PHONY : base/tests/CMakeFiles/blocking_server.dir/rule
+
+# Convenience name for target.
+blocking_server: base/tests/CMakeFiles/blocking_server.dir/rule
+.PHONY : blocking_server
+
+# clean rule for target.
+base/tests/CMakeFiles/blocking_server.dir/clean:
+	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/blocking_server.dir/build.make base/tests/CMakeFiles/blocking_server.dir/clean
+.PHONY : base/tests/CMakeFiles/blocking_server.dir/clean
+
+#=============================================================================
+# Target rules for target base/tests/CMakeFiles/blocking_client.dir
+
+# All Build rule for target.
+base/tests/CMakeFiles/blocking_client.dir/all:
+	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/blocking_client.dir/build.make base/tests/CMakeFiles/blocking_client.dir/depend
+	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/blocking_client.dir/build.make base/tests/CMakeFiles/blocking_client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=3,4 "Built target blocking_client"
+.PHONY : base/tests/CMakeFiles/blocking_client.dir/all
+
+# Build rule for subdir invocation for target.
+base/tests/CMakeFiles/blocking_client.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/tests/CMakeFiles/blocking_client.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles 0
+.PHONY : base/tests/CMakeFiles/blocking_client.dir/rule
+
+# Convenience name for target.
+blocking_client: base/tests/CMakeFiles/blocking_client.dir/rule
+.PHONY : blocking_client
+
+# clean rule for target.
+base/tests/CMakeFiles/blocking_client.dir/clean:
+	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/blocking_client.dir/build.make base/tests/CMakeFiles/blocking_client.dir/clean
+.PHONY : base/tests/CMakeFiles/blocking_client.dir/clean
+
+#=============================================================================
+# Target rules for target net/tests/CMakeFiles/reactor_unittest.dir
+
+# All Build rule for target.
+net/tests/CMakeFiles/reactor_unittest.dir/all:
+	$(MAKE) $(MAKESILENT) -f net/tests/CMakeFiles/reactor_unittest.dir/build.make net/tests/CMakeFiles/reactor_unittest.dir/depend
+	$(MAKE) $(MAKESILENT) -f net/tests/CMakeFiles/reactor_unittest.dir/build.make net/tests/CMakeFiles/reactor_unittest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles --progress-num=17,18 "Built target reactor_unittest"
+.PHONY : net/tests/CMakeFiles/reactor_unittest.dir/all
+
+# Build rule for subdir invocation for target.
+net/tests/CMakeFiles/reactor_unittest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 net/tests/CMakeFiles/reactor_unittest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/quwei5/Desktop/code/HighPerformanceServer/build/CMakeFiles 0
+.PHONY : net/tests/CMakeFiles/reactor_unittest.dir/rule
+
+# Convenience name for target.
+reactor_unittest: net/tests/CMakeFiles/reactor_unittest.dir/rule
+.PHONY : reactor_unittest
+
+# clean rule for target.
+net/tests/CMakeFiles/reactor_unittest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f net/tests/CMakeFiles/reactor_unittest.dir/build.make net/tests/CMakeFiles/reactor_unittest.dir/clean
+.PHONY : net/tests/CMakeFiles/reactor_unittest.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -206,6 +206,18 @@ build base/install: phony base/CMakeFiles/install.util
 # /home/koritafei/code/HighPerformanceServer/base/CMakeLists.txt
 # =============================================================================
 
+
+#############################################
+# Utility command for install/local
+
+build base/tests/CMakeFiles/install/local.util: CUSTOM_COMMAND base/tests/all
+  COMMAND = cd /home/koritafei/code/HighPerformanceServer/build/base/tests && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build base/tests/install/local: phony base/tests/CMakeFiles/install/local.util
+
 # =============================================================================
 # Object build statements for EXECUTABLE target client_unittest2
 
@@ -463,6 +475,38 @@ build ../bin/structuredbinding_unittest: CXX_EXECUTABLE_LINKER__structuredbindin
   TARGET_FILE = ../bin/structuredbinding_unittest
   TARGET_PDB = structuredbinding_unittest.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target blocking_client
+
+
+#############################################
+# Order-only phony target for blocking_client
+
+build cmake_object_order_depends_target_blocking_client: phony || base/tests/CMakeFiles/blocking_client.dir
+
+build base/tests/CMakeFiles/blocking_client.dir/blocking_client.cc.o: CXX_COMPILER__blocking_client_Debug ../base/tests/blocking_client.cc || cmake_object_order_depends_target_blocking_client
+  DEP_FILE = base/tests/CMakeFiles/blocking_client.dir/blocking_client.cc.o.d
+  FLAGS = -ggdb -DCHECK_PTHREAD_RETURN_VALUE -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Werror -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -std=c++2a -fsanitize=address -Wno-null-dereference -Wno-sign-conversion -Wno-unused-local-typedef -Wthread-safety -O0
+  INCLUDES = -I../ -I../.
+  OBJECT_DIR = base/tests/CMakeFiles/blocking_client.dir
+  OBJECT_FILE_DIR = base/tests/CMakeFiles/blocking_client.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target blocking_client
+
+
+#############################################
+# Link the executable ../bin/blocking_client
+
+build ../bin/blocking_client: CXX_EXECUTABLE_LINKER__blocking_client_Debug base/tests/CMakeFiles/blocking_client.dir/blocking_client.cc.o
+  FLAGS = -ggdb -DCHECK_PTHREAD_RETURN_VALUE -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Werror -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -std=c++2a -fsanitize=address -Wno-null-dereference -Wno-sign-conversion -Wno-unused-local-typedef -Wthread-safety -O0
+  OBJECT_DIR = base/tests/CMakeFiles/blocking_client.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = ../bin/blocking_client
+  TARGET_PDB = blocking_client.dbg
+
 
 #############################################
 # Utility command for install/strip
@@ -506,18 +550,6 @@ build ../bin/client_unittest3: CXX_EXECUTABLE_LINKER__client_unittest3_Debug bas
   PRE_LINK = :
   TARGET_FILE = ../bin/client_unittest3
   TARGET_PDB = client_unittest3.dbg
-
-
-#############################################
-# Utility command for install/local
-
-build base/tests/CMakeFiles/install/local.util: CUSTOM_COMMAND base/tests/all
-  COMMAND = cd /home/koritafei/code/HighPerformanceServer/build/base/tests && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-  DESC = Installing only the local directory...
-  pool = console
-  restat = 1
-
-build base/tests/install/local: phony base/tests/CMakeFiles/install/local.util
 
 # =============================================================================
 # Object build statements for EXECUTABLE target nonblocking_connect_unittest
@@ -625,9 +657,183 @@ build base/tests/rebuild_cache: phony base/tests/CMakeFiles/rebuild_cache.util
 build base/tests/list_install_components: phony
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/koritafei/code/HighPerformanceServer/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for install/strip
+
+build net/CMakeFiles/install/strip.util: CUSTOM_COMMAND net/all
+  COMMAND = cd /home/koritafei/code/HighPerformanceServer/build/net && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build net/install/strip: phony net/CMakeFiles/install/strip.util
+
+
+#############################################
+# Utility command for install
+
+build net/CMakeFiles/install.util: CUSTOM_COMMAND net/all
+  COMMAND = cd /home/koritafei/code/HighPerformanceServer/build/net && /usr/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build net/install: phony net/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build net/CMakeFiles/install/local.util: CUSTOM_COMMAND net/all
+  COMMAND = cd /home/koritafei/code/HighPerformanceServer/build/net && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build net/install/local: phony net/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build net/list_install_components: phony
+
+
+#############################################
+# Utility command for edit_cache
+
+build net/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/koritafei/code/HighPerformanceServer/build/net && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build net/edit_cache: phony net/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build net/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/koritafei/code/HighPerformanceServer/build/net && /usr/bin/cmake --regenerate-during-build -S/home/koritafei/code/HighPerformanceServer -B/home/koritafei/code/HighPerformanceServer/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build net/rebuild_cache: phony net/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/koritafei/code/HighPerformanceServer/net/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for install/strip
+
+build net/tests/CMakeFiles/install/strip.util: CUSTOM_COMMAND net/tests/all
+  COMMAND = cd /home/koritafei/code/HighPerformanceServer/build/net/tests && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build net/tests/install/strip: phony net/tests/CMakeFiles/install/strip.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build net/tests/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/koritafei/code/HighPerformanceServer/build/net/tests && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build net/tests/edit_cache: phony net/tests/CMakeFiles/edit_cache.util
+
+# =============================================================================
+# Object build statements for EXECUTABLE target reactor_server_unittest
+
+
+#############################################
+# Order-only phony target for reactor_server_unittest
+
+build cmake_object_order_depends_target_reactor_server_unittest: phony || net/tests/CMakeFiles/reactor_server_unittest.dir
+
+build net/tests/CMakeFiles/reactor_server_unittest.dir/reactor_server_unittest.cc.o: CXX_COMPILER__reactor_server_unittest_Debug ../net/tests/reactor_server_unittest.cc || cmake_object_order_depends_target_reactor_server_unittest
+  DEP_FILE = net/tests/CMakeFiles/reactor_server_unittest.dir/reactor_server_unittest.cc.o.d
+  FLAGS = -ggdb -DCHECK_PTHREAD_RETURN_VALUE -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Werror -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -std=c++2a -fsanitize=address -Wno-null-dereference -Wno-sign-conversion -Wno-unused-local-typedef -Wthread-safety -O0
+  INCLUDES = -I../ -I../.
+  OBJECT_DIR = net/tests/CMakeFiles/reactor_server_unittest.dir
+  OBJECT_FILE_DIR = net/tests/CMakeFiles/reactor_server_unittest.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target reactor_server_unittest
+
+
+#############################################
+# Link the executable ../bin/reactor_server_unittest
+
+build ../bin/reactor_server_unittest: CXX_EXECUTABLE_LINKER__reactor_server_unittest_Debug net/tests/CMakeFiles/reactor_server_unittest.dir/reactor_server_unittest.cc.o
+  FLAGS = -ggdb -DCHECK_PTHREAD_RETURN_VALUE -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Werror -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -std=c++2a -fsanitize=address -Wno-null-dereference -Wno-sign-conversion -Wno-unused-local-typedef -Wthread-safety -O0
+  OBJECT_DIR = net/tests/CMakeFiles/reactor_server_unittest.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = ../bin/reactor_server_unittest
+  TARGET_PDB = reactor_server_unittest.dbg
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build net/tests/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/koritafei/code/HighPerformanceServer/build/net/tests && /usr/bin/cmake --regenerate-during-build -S/home/koritafei/code/HighPerformanceServer -B/home/koritafei/code/HighPerformanceServer/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build net/tests/rebuild_cache: phony net/tests/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build net/tests/list_install_components: phony
+
+
+#############################################
+# Utility command for install/local
+
+build net/tests/CMakeFiles/install/local.util: CUSTOM_COMMAND net/tests/all
+  COMMAND = cd /home/koritafei/code/HighPerformanceServer/build/net/tests && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build net/tests/install/local: phony net/tests/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install
+
+build net/tests/CMakeFiles/install.util: CUSTOM_COMMAND net/tests/all
+  COMMAND = cd /home/koritafei/code/HighPerformanceServer/build/net/tests && /usr/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build net/tests/install: phony net/tests/CMakeFiles/install.util
+
+# =============================================================================
 # Target aliases.
 
 build base_lib: phony ../lib/libbase_lib.a
+
+build blocking_client: phony ../bin/blocking_client
 
 build blocking_server: phony ../bin/blocking_server
 
@@ -642,6 +848,8 @@ build ctrip_thread_pool_unittest: phony ../bin/ctrip_thread_pool_unittest
 build libbase_lib.a: phony ../lib/libbase_lib.a
 
 build nonblocking_connect_unittest: phony ../bin/nonblocking_connect_unittest
+
+build reactor_server_unittest: phony ../bin/reactor_server_unittest
 
 build select_client_unittest: phony ../bin/select_client_unittest
 
@@ -661,7 +869,7 @@ build varglist_unittest: phony ../bin/varglist_unittest
 #############################################
 # Folder: /home/koritafei/code/HighPerformanceServer/build
 
-build all: phony base/all
+build all: phony base/all net/all
 
 # =============================================================================
 
@@ -675,7 +883,21 @@ build base/all: phony ../lib/libbase_lib.a base/tests/all
 #############################################
 # Folder: /home/koritafei/code/HighPerformanceServer/build/base/tests
 
-build base/tests/all: phony ../bin/client_unittest2 ../bin/client_unittest1 ../bin/server_unittest ../bin/ctrip_thread_pool_unittest ../bin/select_client_unittest ../bin/varglist_unittest ../bin/select_server_unittest ../bin/structuredbinding_unittest ../bin/client_unittest3 ../bin/nonblocking_connect_unittest ../bin/blocking_server
+build base/tests/all: phony ../bin/client_unittest2 ../bin/client_unittest1 ../bin/server_unittest ../bin/ctrip_thread_pool_unittest ../bin/select_client_unittest ../bin/varglist_unittest ../bin/select_server_unittest ../bin/structuredbinding_unittest ../bin/blocking_client ../bin/client_unittest3 ../bin/nonblocking_connect_unittest ../bin/blocking_server
+
+# =============================================================================
+
+#############################################
+# Folder: /home/koritafei/code/HighPerformanceServer/build/net
+
+build net/all: phony net/tests/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/koritafei/code/HighPerformanceServer/build/net/tests
+
+build net/tests/all: phony ../bin/reactor_server_unittest
 
 # =============================================================================
 # Built-in targets
@@ -684,14 +906,14 @@ build base/tests/all: phony ../bin/client_unittest2 ../bin/client_unittest1 ../b
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../base/CMakeLists.txt ../base/tests/CMakeLists.txt /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-C.cmake /usr/share/cmake/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake/Modules/Compiler/Clang.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.20.2/CMakeCCompiler.cmake CMakeFiles/3.20.2/CMakeCXXCompiler.cmake CMakeFiles/3.20.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../base/CMakeLists.txt ../base/tests/CMakeLists.txt ../net/CMakeLists.txt ../net/tests/CMakeLists.txt /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-C.cmake /usr/share/cmake/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake/Modules/Compiler/Clang.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.20.2/CMakeCCompiler.cmake CMakeFiles/3.20.2/CMakeCXXCompiler.cmake CMakeFiles/3.20.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../base/CMakeLists.txt ../base/tests/CMakeLists.txt /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-C.cmake /usr/share/cmake/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake/Modules/Compiler/Clang.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.20.2/CMakeCCompiler.cmake CMakeFiles/3.20.2/CMakeCXXCompiler.cmake CMakeFiles/3.20.2/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../base/CMakeLists.txt ../base/tests/CMakeLists.txt ../net/CMakeLists.txt ../net/tests/CMakeLists.txt /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-C.cmake /usr/share/cmake/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake/Modules/Compiler/Clang.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.20.2/CMakeCCompiler.cmake CMakeFiles/3.20.2/CMakeCXXCompiler.cmake CMakeFiles/3.20.2/CMakeSystem.cmake: phony
 
 
 #############################################

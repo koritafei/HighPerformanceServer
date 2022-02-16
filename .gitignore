@@ -1,4 +1,5 @@
-.vscode
-.cache
-lib
-bin
+.vscode/*
+.cache/*
+lib/*
+bin/*
+build/*

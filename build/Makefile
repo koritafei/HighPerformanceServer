@@ -278,6 +278,71 @@ nonblocking_connect_unittest/fast:
 	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/nonblocking_connect_unittest.dir/build.make base/tests/CMakeFiles/nonblocking_connect_unittest.dir/build
 .PHONY : nonblocking_connect_unittest/fast
 
+#=============================================================================
+# Target rules for targets named select_server_unittest
+
+# Build rule for target.
+select_server_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 select_server_unittest
+.PHONY : select_server_unittest
+
+# fast build rule for target.
+select_server_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/select_server_unittest.dir/build.make base/tests/CMakeFiles/select_server_unittest.dir/build
+.PHONY : select_server_unittest/fast
+
+#=============================================================================
+# Target rules for targets named select_client_unittest
+
+# Build rule for target.
+select_client_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 select_client_unittest
+.PHONY : select_client_unittest
+
+# fast build rule for target.
+select_client_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/select_client_unittest.dir/build.make base/tests/CMakeFiles/select_client_unittest.dir/build
+.PHONY : select_client_unittest/fast
+
+#=============================================================================
+# Target rules for targets named blocking_server
+
+# Build rule for target.
+blocking_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 blocking_server
+.PHONY : blocking_server
+
+# fast build rule for target.
+blocking_server/fast:
+	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/blocking_server.dir/build.make base/tests/CMakeFiles/blocking_server.dir/build
+.PHONY : blocking_server/fast
+
+#=============================================================================
+# Target rules for targets named blocking_client
+
+# Build rule for target.
+blocking_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 blocking_client
+.PHONY : blocking_client
+
+# fast build rule for target.
+blocking_client/fast:
+	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/blocking_client.dir/build.make base/tests/CMakeFiles/blocking_client.dir/build
+.PHONY : blocking_client/fast
+
+#=============================================================================
+# Target rules for targets named reactor_unittest
+
+# Build rule for target.
+reactor_unittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reactor_unittest
+.PHONY : reactor_unittest
+
+# fast build rule for target.
+reactor_unittest/fast:
+	$(MAKE) $(MAKESILENT) -f net/tests/CMakeFiles/reactor_unittest.dir/build.make net/tests/CMakeFiles/reactor_unittest.dir/build
+.PHONY : reactor_unittest/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -291,11 +356,16 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... base_lib"
+	@echo "... blocking_client"
+	@echo "... blocking_server"
 	@echo "... client_unittest1"
 	@echo "... client_unittest2"
 	@echo "... client_unittest3"
 	@echo "... ctrip_thread_pool_unittest"
 	@echo "... nonblocking_connect_unittest"
+	@echo "... reactor_unittest"
+	@echo "... select_client_unittest"
+	@echo "... select_server_unittest"
 	@echo "... server_unittest"
 	@echo "... structuredbinding_unittest"
 	@echo "... varglist_unittest"

@@ -16,3 +16,4 @@ add_executable(select_server_unittest select_server_unittest.cc)
 
 add_executable(select_client_unittest select_client_unittest.cc)
 add_executable(blocking_server blocking_server.cc)
+add_executable(blocking_client blocking_client.cc)

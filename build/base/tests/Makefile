@@ -273,6 +273,110 @@ nonblocking_connect_unittest/fast:
 	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/nonblocking_connect_unittest.dir/build.make base/tests/CMakeFiles/nonblocking_connect_unittest.dir/build
 .PHONY : nonblocking_connect_unittest/fast
 
+# Convenience name for target.
+base/tests/CMakeFiles/select_server_unittest.dir/rule:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/tests/CMakeFiles/select_server_unittest.dir/rule
+.PHONY : base/tests/CMakeFiles/select_server_unittest.dir/rule
+
+# Convenience name for target.
+select_server_unittest: base/tests/CMakeFiles/select_server_unittest.dir/rule
+.PHONY : select_server_unittest
+
+# fast build rule for target.
+select_server_unittest/fast:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/select_server_unittest.dir/build.make base/tests/CMakeFiles/select_server_unittest.dir/build
+.PHONY : select_server_unittest/fast
+
+# Convenience name for target.
+base/tests/CMakeFiles/select_client_unittest.dir/rule:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/tests/CMakeFiles/select_client_unittest.dir/rule
+.PHONY : base/tests/CMakeFiles/select_client_unittest.dir/rule
+
+# Convenience name for target.
+select_client_unittest: base/tests/CMakeFiles/select_client_unittest.dir/rule
+.PHONY : select_client_unittest
+
+# fast build rule for target.
+select_client_unittest/fast:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/select_client_unittest.dir/build.make base/tests/CMakeFiles/select_client_unittest.dir/build
+.PHONY : select_client_unittest/fast
+
+# Convenience name for target.
+base/tests/CMakeFiles/blocking_server.dir/rule:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/tests/CMakeFiles/blocking_server.dir/rule
+.PHONY : base/tests/CMakeFiles/blocking_server.dir/rule
+
+# Convenience name for target.
+blocking_server: base/tests/CMakeFiles/blocking_server.dir/rule
+.PHONY : blocking_server
+
+# fast build rule for target.
+blocking_server/fast:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/blocking_server.dir/build.make base/tests/CMakeFiles/blocking_server.dir/build
+.PHONY : blocking_server/fast
+
+# Convenience name for target.
+base/tests/CMakeFiles/blocking_client.dir/rule:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/tests/CMakeFiles/blocking_client.dir/rule
+.PHONY : base/tests/CMakeFiles/blocking_client.dir/rule
+
+# Convenience name for target.
+blocking_client: base/tests/CMakeFiles/blocking_client.dir/rule
+.PHONY : blocking_client
+
+# fast build rule for target.
+blocking_client/fast:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/blocking_client.dir/build.make base/tests/CMakeFiles/blocking_client.dir/build
+.PHONY : blocking_client/fast
+
+blocking_client.o: blocking_client.cc.o
+.PHONY : blocking_client.o
+
+# target to build an object file
+blocking_client.cc.o:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/blocking_client.dir/build.make base/tests/CMakeFiles/blocking_client.dir/blocking_client.cc.o
+.PHONY : blocking_client.cc.o
+
+blocking_client.i: blocking_client.cc.i
+.PHONY : blocking_client.i
+
+# target to preprocess a source file
+blocking_client.cc.i:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/blocking_client.dir/build.make base/tests/CMakeFiles/blocking_client.dir/blocking_client.cc.i
+.PHONY : blocking_client.cc.i
+
+blocking_client.s: blocking_client.cc.s
+.PHONY : blocking_client.s
+
+# target to generate assembly for a file
+blocking_client.cc.s:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/blocking_client.dir/build.make base/tests/CMakeFiles/blocking_client.dir/blocking_client.cc.s
+.PHONY : blocking_client.cc.s
+
+blocking_server.o: blocking_server.cc.o
+.PHONY : blocking_server.o
+
+# target to build an object file
+blocking_server.cc.o:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/blocking_server.dir/build.make base/tests/CMakeFiles/blocking_server.dir/blocking_server.cc.o
+.PHONY : blocking_server.cc.o
+
+blocking_server.i: blocking_server.cc.i
+.PHONY : blocking_server.i
+
+# target to preprocess a source file
+blocking_server.cc.i:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/blocking_server.dir/build.make base/tests/CMakeFiles/blocking_server.dir/blocking_server.cc.i
+.PHONY : blocking_server.cc.i
+
+blocking_server.s: blocking_server.cc.s
+.PHONY : blocking_server.s
+
+# target to generate assembly for a file
+blocking_server.cc.s:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/blocking_server.dir/build.make base/tests/CMakeFiles/blocking_server.dir/blocking_server.cc.s
+.PHONY : blocking_server.cc.s
+
 client_unittest1.o: client_unittest1.cc.o
 .PHONY : client_unittest1.o
 
@@ -393,6 +497,54 @@ nonblocking_connect_unittest.cc.s:
 	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/nonblocking_connect_unittest.dir/build.make base/tests/CMakeFiles/nonblocking_connect_unittest.dir/nonblocking_connect_unittest.cc.s
 .PHONY : nonblocking_connect_unittest.cc.s
 
+select_client_unittest.o: select_client_unittest.cc.o
+.PHONY : select_client_unittest.o
+
+# target to build an object file
+select_client_unittest.cc.o:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/select_client_unittest.dir/build.make base/tests/CMakeFiles/select_client_unittest.dir/select_client_unittest.cc.o
+.PHONY : select_client_unittest.cc.o
+
+select_client_unittest.i: select_client_unittest.cc.i
+.PHONY : select_client_unittest.i
+
+# target to preprocess a source file
+select_client_unittest.cc.i:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/select_client_unittest.dir/build.make base/tests/CMakeFiles/select_client_unittest.dir/select_client_unittest.cc.i
+.PHONY : select_client_unittest.cc.i
+
+select_client_unittest.s: select_client_unittest.cc.s
+.PHONY : select_client_unittest.s
+
+# target to generate assembly for a file
+select_client_unittest.cc.s:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/select_client_unittest.dir/build.make base/tests/CMakeFiles/select_client_unittest.dir/select_client_unittest.cc.s
+.PHONY : select_client_unittest.cc.s
+
+select_server_unittest.o: select_server_unittest.cc.o
+.PHONY : select_server_unittest.o
+
+# target to build an object file
+select_server_unittest.cc.o:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/select_server_unittest.dir/build.make base/tests/CMakeFiles/select_server_unittest.dir/select_server_unittest.cc.o
+.PHONY : select_server_unittest.cc.o
+
+select_server_unittest.i: select_server_unittest.cc.i
+.PHONY : select_server_unittest.i
+
+# target to preprocess a source file
+select_server_unittest.cc.i:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/select_server_unittest.dir/build.make base/tests/CMakeFiles/select_server_unittest.dir/select_server_unittest.cc.i
+.PHONY : select_server_unittest.cc.i
+
+select_server_unittest.s: select_server_unittest.cc.s
+.PHONY : select_server_unittest.s
+
+# target to generate assembly for a file
+select_server_unittest.cc.s:
+	cd /Users/quwei5/Desktop/code/HighPerformanceServer/build && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/select_server_unittest.dir/build.make base/tests/CMakeFiles/select_server_unittest.dir/select_server_unittest.cc.s
+.PHONY : select_server_unittest.cc.s
+
 server_unittest.o: server_unittest.cc.o
 .PHONY : server_unittest.o
 
@@ -477,14 +629,24 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... blocking_client"
+	@echo "... blocking_server"
 	@echo "... client_unittest1"
 	@echo "... client_unittest2"
 	@echo "... client_unittest3"
 	@echo "... ctrip_thread_pool_unittest"
 	@echo "... nonblocking_connect_unittest"
+	@echo "... select_client_unittest"
+	@echo "... select_server_unittest"
 	@echo "... server_unittest"
 	@echo "... structuredbinding_unittest"
 	@echo "... varglist_unittest"
+	@echo "... blocking_client.o"
+	@echo "... blocking_client.i"
+	@echo "... blocking_client.s"
+	@echo "... blocking_server.o"
+	@echo "... blocking_server.i"
+	@echo "... blocking_server.s"
 	@echo "... client_unittest1.o"
 	@echo "... client_unittest1.i"
 	@echo "... client_unittest1.s"
@@ -500,6 +662,12 @@ help:
 	@echo "... nonblocking_connect_unittest.o"
 	@echo "... nonblocking_connect_unittest.i"
 	@echo "... nonblocking_connect_unittest.s"
+	@echo "... select_client_unittest.o"
+	@echo "... select_client_unittest.i"
+	@echo "... select_client_unittest.s"
+	@echo "... select_server_unittest.o"
+	@echo "... select_server_unittest.i"
+	@echo "... select_server_unittest.s"
 	@echo "... server_unittest.o"
 	@echo "... server_unittest.i"
 	@echo "... server_unittest.s"

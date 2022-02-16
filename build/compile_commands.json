@@ -46,6 +46,11 @@
 },
 {
   "directory": "/home/koritafei/code/HighPerformanceServer/build",
+  "command": "/usr/bin/clang++-13 -I../ -I../. -ggdb -DCHECK_PTHREAD_RETURN_VALUE -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Werror -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -std=c++2a -fsanitize=address -Wno-null-dereference -Wno-sign-conversion -Wno-unused-local-typedef -Wthread-safety -O0 -o base/tests/CMakeFiles/blocking_client.dir/blocking_client.cc.o -c /home/koritafei/code/HighPerformanceServer/base/tests/blocking_client.cc",
+  "file": "/home/koritafei/code/HighPerformanceServer/base/tests/blocking_client.cc"
+},
+{
+  "directory": "/home/koritafei/code/HighPerformanceServer/build",
   "command": "/usr/bin/clang++-13 -I../ -I../. -ggdb -DCHECK_PTHREAD_RETURN_VALUE -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Werror -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -std=c++2a -fsanitize=address -Wno-null-dereference -Wno-sign-conversion -Wno-unused-local-typedef -Wthread-safety -O0 -o base/tests/CMakeFiles/client_unittest3.dir/client_unittest3.cc.o -c /home/koritafei/code/HighPerformanceServer/base/tests/client_unittest3.cc",
   "file": "/home/koritafei/code/HighPerformanceServer/base/tests/client_unittest3.cc"
 },
@@ -58,5 +63,10 @@
   "directory": "/home/koritafei/code/HighPerformanceServer/build",
   "command": "/usr/bin/clang++-13 -I../ -I../. -ggdb -DCHECK_PTHREAD_RETURN_VALUE -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Werror -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -std=c++2a -fsanitize=address -Wno-null-dereference -Wno-sign-conversion -Wno-unused-local-typedef -Wthread-safety -O0 -o base/tests/CMakeFiles/blocking_server.dir/blocking_server.cc.o -c /home/koritafei/code/HighPerformanceServer/base/tests/blocking_server.cc",
   "file": "/home/koritafei/code/HighPerformanceServer/base/tests/blocking_server.cc"
+},
+{
+  "directory": "/home/koritafei/code/HighPerformanceServer/build",
+  "command": "/usr/bin/clang++-13 -I../ -I../. -ggdb -DCHECK_PTHREAD_RETURN_VALUE -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Werror -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -std=c++2a -fsanitize=address -Wno-null-dereference -Wno-sign-conversion -Wno-unused-local-typedef -Wthread-safety -O0 -o net/tests/CMakeFiles/reactor_server_unittest.dir/reactor_server_unittest.cc.o -c /home/koritafei/code/HighPerformanceServer/net/tests/reactor_server_unittest.cc",
+  "file": "/home/koritafei/code/HighPerformanceServer/net/tests/reactor_server_unittest.cc"
 }
 ]
