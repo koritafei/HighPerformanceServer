@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10.0)
 project(HighPerformanceServer)
 
 set(CXX_FLAGS
- -ggdb
+ -g
  -DCHECK_PTHREAD_RETURN_VALUE
  -D_FILE_OFFSET_BITS=64
  -Wall
@@ -47,3 +47,4 @@ include_directories(${PROJECT_SOURCE_DIR} . )
 
 add_subdirectory(base/)
 add_subdirectory(net/)
+add_subdirectory(libevent/)

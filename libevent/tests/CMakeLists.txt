@@ -1,0 +1,2 @@
+add_executable(libevent_unittest libevent_unittest.cc)
+target_link_libraries(libevent_unittest lib_event)
