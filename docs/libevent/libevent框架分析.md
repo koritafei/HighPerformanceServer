@@ -146,3 +146,92 @@ struct event {
 #### 事件设置的接口函数
 
 要向`libevent`添加一个事件，需要首先设置`event`对象。
+通过调用`event_set(), event_base_set(), event_priority_set()`.
+
+```cpp
+void event_set(struct event *ev,
+               int           fd,
+               short         events,
+               void (*callback)(int, short, void *),
+               void *arg);
+```
+
+### 事件处理框架`event_base`
+
+`event_base`位于`event_internal.h`中：
+
+```cpp
+struct event_base {
+	const struct eventop *evsel;
+	void *evbase;
+	struct event_changelist changelist;
+
+	const struct eventop *evsigsel;
+	struct evsig_info sig;
+
+	int virtual_event_count;
+	int virtual_event_count_max;
+	int event_count;
+	int event_count_max;
+	int event_count_active;
+	int event_count_active_max;
+
+	int event_gotterm;
+	int event_break;
+	int event_continue;
+
+	int event_running_priority;
+	int running_loop;
+	int n_deferreds_queued;
+
+	struct evcallback_list *activequeues;
+	int nactivequeues;
+	struct evcallback_list active_later_queue;
+
+	struct common_timeout_list **common_timeout_queues;
+	int n_common_timeouts;
+	int n_common_timeouts_allocated;
+
+	struct event_io_map io;
+
+	struct event_signal_map sigmap;
+
+	struct min_heap timeheap;
+
+	struct timeval tv_cache;
+
+	struct evutil_monotonic_timer monotonic_timer;
+
+	struct timeval tv_clock_diff;
+	time_t last_updated_clock_diff;
+
+#ifndef EVENT__DISABLE_THREAD_SUPPORT
+	unsigned long th_owner_id;
+	void *th_base_lock;
+	void *current_event_cond;
+	int current_event_waiters;
+#endif
+	struct event_callback *current_event;
+
+#ifdef _WIN32
+	struct event_iocp_port *iocp;
+#endif
+
+	enum event_base_config_flag flags;
+
+	struct timeval max_dispatch_time;
+	int max_dispatch_callbacks;
+	int limit_callbacks_after_prio;
+
+	int is_notify_pending;
+	evutil_socket_t th_notify_fd[2];
+	struct event th_notify;
+	int (*th_notify_fn)(struct event_base *base);
+
+	struct evutil_weakrand_state weakrand_seed;
+
+	LIST_HEAD(once_event_list, event_once) once_events;
+
+	struct evwatch_list watchers[EVWATCH_MAX];
+};
+```
